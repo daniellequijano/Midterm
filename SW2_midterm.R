@@ -1,6 +1,6 @@
 ##task1
 
-data <- read.csv('midtermseatwork_data.csv')
+data <- read.csv('mtsw_data.csv')
 
 
 meanfun1 <- function(dat, min,max) {
@@ -9,7 +9,7 @@ mean(x,na.rm=TRUE)
 }
 
 ##TASK2
-data <- read.csv('midtermseatwork_data.csv')
+data <- read.csv('mtsw_data.csv')
 
 meanfun2 <- function(dat,Month, Day) {
   y=0
@@ -21,7 +21,7 @@ meanfun2 <- function(dat,Month, Day) {
 
 #task3
 
-data <- read.csv('midtermseatwork_data.csv')
+data <- read.csv('mtsw_data.csv')
 
 meanfun3 <- function(dat, Month) {
   y=0
