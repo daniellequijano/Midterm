@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ##LIBRARIES:\
+\
+library("EBImage")\
+library(jpeg)\
+source("http://bioconductor.org/biocLite.R")\
+biocLite("EBImage")\
+##1.) READING IMAGE FILE FROM WEB\
+\
+myurl <-"https://d384u2mq2suvbq.cloudfront.net/public/spree/products/1597/jumbo/Japanese-Cherry-Blossom-Fragrance-Oil.jpg?1529607178"\
+senbonsakura_kageyoshi <- tempfile()\
+download.file(myurl,senbonsakura_kageyoshi,mode="wb")\
+image_web <- readJPEG(senbonsakura_kageyoshi)\
+\
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)\
+rasterImage(image_web,0,0,1,1)\
+\
+\
+#get size\
+dim(image_web)[1:2]\
+#function for resizing the image\
+y <- function(image_web, h = "", w ="" )\{\
+\
+h<-dim(image_web)[1]\
+w<-dim(image_web)[2]\
+\}\
+#function for resizing the image\
+resize <- function(pic, x, y)\{\
+  h<-dim(pic)[1]\
+  w<-dim(pic)[2]\
+  dim\
+  h<- x\
+  w <- y\
+  plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)\
+  rasterImage(pic,0,0,1,1)\
+\
+\}\
+  --------------------------------------\
+  ##2.) READING IMAGE FILE FROM LOCAL FILES\
+  image_local <- readJPEG("coffee.jpg", native = TRUE)\
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)\
+rasterImage(img,0,0,1,1)\
+  \
+\
+?readJPEG}
